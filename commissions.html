@@ -137,9 +137,24 @@
       display: block;
     }
 
+    .portfolio, .about {
+        position: absolute;
+        top: 17px;
+        color: white;
+        font-size: 48px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .portfolio:hover, .about:hover {
+        color: #FFD700;
+    }
+
+    .portfolio { left: 100px; }
+    .about { left: 400px; }
+
     .home-btn { width:70px; height:72px; left:10px; top:9px; position:absolute; }
-    .about { left:97px; top:17px; position:absolute; color:white; font-size:48px; font-weight:600; }
-    .portfolio { left:384px; top:17px; position:absolute; color:white; font-size:48px; font-weight:600; }
   </style>
 </head>
 <body>
@@ -150,12 +165,8 @@
 
   <!-- top bar -->
   <a class="home-btn" href="main%20page.html"><div style="width:52.5px;height:60px;position:absolute;left:8.75px;top:6px;outline:3.5px white solid;outline-offset:-1.75px"></div></a>
-  <a href="portfolio.html" class="portfolio" style="text-decoration:none; color:white;">
-      PORTFOLIO
-    </a>
-  <a href="aboutme.html" class="about" style="text-decoration:none; color:white;">
-      ABOUT ME
-    </a>
+  <a href="portfolio.html" class="portfolio">PORTFOLIO</a>
+  <a href="aboutme.html" class="about">ABOUT ME</a>
 
   <!-- Request Form -->
   <a href="https://artistree.io/bexyarts" style="text-decoration:none;">
