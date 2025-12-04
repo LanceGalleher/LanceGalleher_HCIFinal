@@ -144,60 +144,50 @@
   }
 
 
-  /* SMP TAB */
-    .smp-buttons {
+  .screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .screenshot-grid img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+
+  .game-description-section {
     display: flex;
-    flex-direction: row;
-    gap: 15px;
+    gap: 30px;
+    align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
+    margin-top: 70px;
   }
 
-  .smp-button {
-    background-color: #D9D9D9;
-    color: black;
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    width: 150px;
-    text-align: center;
+  .game-img {
+    width: 350px;
+    height: auto;
   }
 
-  .smp-button:hover {
-    background-color: #C0C0C0;
-    transform: translateY(-2px);
+  .description-box {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
   }
 
-  .smp-button:active {
-    transform: translateY(0);
+  .description-box h3 {
+    margin-top: 0;
+    font-size: 32px;
+    font-weight: 700;
   }
 
-  .smp-title {
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: 15px;
-  }
-
-  .smp-info-box {
-    background-color: rgba(0,0,0,0.1);
-    color: white;
-    padding: 15px 20px;
-    border-radius: 8px;
-    text-align: left;
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .smp-info {
-    text-align: left;
-    font-size: 40px;
-    margin-bottom: 10px;
+  .description-box p {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #111;
   }
 
     .home-btn { width:70px; height:72px; left:10px; top:9px; position:absolute; }
@@ -231,7 +221,6 @@
     <div class="sidebar">
         <div id="tab-artwork" class="tab">ARTWORK</div>
         <div id="tab-gamedev" class="tab">GAME DEVELOPMENT</div>
-        <div id="tab-smp" class="tab">SMP PROJECTS</div>
     </div>
 
     <!-- Top bar -->
@@ -260,65 +249,82 @@
 
       <div class="dropdown">
         <button class="dropdown-btn">Aeternum: The Trials</button>
+
         <div class="dropdown-content">
-          <p>Description:</p>
-          <p>Status:.</p>
+
+          <div class="screenshot-grid">
+            <img src="Assets/Game Dev/The Trials/Trials_1.png">
+            <img src="Assets/Game Dev/The Trials/Trials_2.png">
+            <img src="Assets/Game Dev/The Trials/Trials_3.png">
+          </div>
+
+          <div class="game-description-section">
+            <img class="game-img" src="Assets/Game Dev/The Trials/Trials_waystone.png">
+
+            <div class="description-box">
+              <h3>Description</h3>
+              <p>
+                Description woah
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
 
       <div class="dropdown">
         <button class="dropdown-btn">Aeternum: Map Testing</button>
         <div class="dropdown-content">
-          <p>Description:</p>
-          <p>Status:</p>
+
+          <div class="screenshot-grid">
+            <img src="Assets/Game Dev/Map%20Test/map_1.png">
+            <img src="Assets/Game Dev/The%20Trials/Trials_map.PNG">
+            <img src="Assets/Game Dev/Map%20Test/waystoneconcept_1.PNG">
+          </div>
+
+          <div class="game-description-section">
+            <img class="game-img" style="width: 500px" src="Assets/Game Dev/Map%20Test/map_2.png">
+
+            <div class="description-box">
+              <h3>Description</h3>
+              <p>
+                Description woah
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="dropdown">
         <button class="dropdown-btn">It Lurks Within</button>
         <div class="dropdown-content">
-          <p>Description:</p>
-          <p>Status:</p>
-        </div>
+          <div class="screenshot-grid">
+            <img src="Assets/Game Dev/It%20Lurks%20Within/Titlescreen_final.png">
+            <img src="Assets/Game Dev/It%20Lurks%20Within/Roe_ref.PNG">
+            <img src="Assets/Game Dev/It%20Lurks%20Within/bg_1.PNG">
+          </div>
+
+          <div class="game-description-section">
+            <img class="game-img" style="width: 700px" src="Assets/Game Dev/It%20Lurks%20Within/bg_3.PNG">
+
+            <div class="description-box">
+              <h3>Description</h3>
+              <p>
+                Description woah
+              </p>
+            </div>
+          </div>
       </div>
     </div>
-
-
-    <!-- SMP TAB -->
-    <div id="content-smp" class="content hidden">
-
-      <div class="smp-info-box">
-        <h1 class="smp-info">What is an SMP?</h1>
-        <p>SMP stands for “Survival Multiplayer”. This term is used when referring to multiplayer servers online. In this context - I am referring to multiplayer servers hosted through the game Minecraft.</p>
-        </div>
-
-      <h1 class="smp-title">ACTIVE SMPS</h1>
-      <div class="smp-buttons">
-        <button class="smp-button" data-smp-type="active" data-smp-name="SMP 1">SMP 1</button>
-        <button class="smp-button" data-smp-type="active" data-smp-name="SMP 2">SMP 2</button>
-      </div>
-
-      <h1 class="smp-title">PREVIOUS SMPS</h1>
-      <div class="smp-buttons">
-        <button class="smp-button" data-smp-type="previous" data-smp-name="SMP 1">SMP 1</button>
-        <button class="smp-button" data-smp-type="previous" data-smp-name="SMP 2">SMP 2</button>
-        <button class="smp-button" data-smp-type="previous" data-smp-name="SMP 3">SMP 3</button>
-      </div>
-
-      <div id="smp-display" class="smp-display"></div>
 
     </div>
 
 
-  </div>
-
-  <!-- Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const tabs = [
         { tabId: 'tab-artwork', contentId: 'content-artwork' },
         { tabId: 'tab-gamedev', contentId: 'content-gamedev' },
-        { tabId: 'tab-smp', contentId: 'content-smp' }
       ];
 
       function hideAll() {
@@ -364,69 +370,6 @@
     content.style.display = (content.style.display === 'block') ? 'none' : 'block';
   });
 });
-
-  document.addEventListener('DOMContentLoaded', function () {
-
-
-  const smpButtons = document.querySelectorAll(".smp-button");
-
-  smpButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const type = button.dataset.smpType;
-      const name = button.dataset.smpName;
-
-      console.log(`${type.charAt(0).toUpperCase() + type.slice(1)} SMP clicked: ${name}`);
-    });
-  });
-
-});
-
-
-  const smpData = {
-    active: {
-      "SMP 1": {
-        description: "Description",
-      },
-      "SMP 2": {
-        description: "Description",
-      }
-    },
-    previous: {
-      "SMP 1": {
-        description: "Description",
-      },
-      "SMP 2": {
-        description: "Description",
-      },
-      "SMP 3": {
-        description: "Description",
-      }
-    }
-  };
-
-
-const smpButtons = document.querySelectorAll(".smp-button");
-const smpDisplay = document.getElementById("smp-display");
-
-smpButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const type = button.dataset.smpType;
-    const name = button.dataset.smpName;
-    const info = smpData[type][name];
-
-    if (info) {
-      smpDisplay.innerHTML = `
-        <div style="background: rgba(0,0,0,0.05); padding: 20px; border-radius: 8px; margin-top: 10px;">
-          <h2>${name}</h2>
-          <p><strong>Description:</strong> ${info.description}</p>
-        </div>
-      `;
-    }
-  });
-});
-
-
-
 
 
   const buttons = document.querySelectorAll(".artwork-yearbutton");
