@@ -4,39 +4,100 @@
     <meta charset="UTF-8">
     <title>Home</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Inter', Arial, sans-serif;
+            background-color: #464D77;
+            color: white;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90vw;
+            max-width: 1440px;
+            aspect-ratio: 1440 / 874;
+            position: relative;
+            background: #464D77;
+        }
+
+        /* Buttons */
+        .btn {
+            position: absolute;
+            width: 35%;
+            height: 10%;
+            background: #ecac93;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5vw;
+            font-weight: 600;
+            color: black;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #c48a73;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        img {
+            position: absolute;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
-<body style="margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh;">
+<body>
 
-<div style="width: 1440px; height: 874px; position: relative; background: #464D77; overflow: hidden">
-  <div style="width: 591px; height: 95px; left: 28px; top: 449px; position: absolute; background: #D9D9D9; border-radius: 10px"></div>
-  <div style="width: 591px; height: 95px; left: 28px; top: 564px; position: absolute; background: #D9D9D9; border-radius: 10px"></div>
-  <div style="width: 591px; height: 96px; left: 28px; top: 678px; position: absolute; background: #D9D9D9; border-radius: 10px"></div>
+<div class="container">
+    <!-- Buttons -->
+    <a href="aboutme.html" class="btn" style="left:5%; top:50%;">ABOUT ME</a>
+    <a href="portfolio.html" class="btn" style="left:5%; top:64%;">PORTFOLIO</a>
+    <a href="commissions.html" class="btn" style="left:5%; top:78%;">COMMISSIONS</a>
 
-  <a href="aboutme.html" style="text-decoration: none; color: black;">
-    <div style="width: 591px; height: 95px; left: 28px; top: 449px; position: absolute; background: #D9D9D9; border-radius: 10px"></div>
-    <div style="width: 211px; height: 38px; left: 218px; top: 475px; position: absolute; color: black; font-size: 40px; font-family: Inter;">ABOUT ME</div>
-  </a>
+    <!-- Logos -->
+    <img src="Assets/logo.PNG" style="width:984px; height:437px; left:4px; top:2px;">
+    <a href="https://www.twitch.tv/bexyarts" target="_blank">
+      <img src="Assets/logos/twitch.png" style="width:74px; height:74px; left:70px; top:786px;">
+    </a>
+    <a href="https://discord.com/invite/MvA49TS9zn" target="_blank">
+      <img src="Assets/logos/discord.png" style="width:74px; height:74px; left:154px; top:786px;">
+    </a>
+    <a href="https://www.youtube.com/channel/UCTZ7BNc9uWJTgg4vJLzLphA" target="_blank">
+      <img src="Assets/logos/youtube.png" style="width:74px; height:74px; left:238px; top:786px;">
+    </a>
+    <a href="https://www.tumblr.com/bexyarts" target="_blank">
+      <img src="Assets/logos/tumblr.png" style="width:74px; height:74px; left:322px; top:786px;">
+    </a>
+    <a href="https://bsky.app/profile/bexyarts.bsky.social" target="_blank">
+      <img src="Assets/logos/bsky.png" style="width:74px; height:74px; left:406px; top:786px;">
+    </a>
 
-  <a href="portfolio.html" style="text-decoration: none; color: black;">
-    <div style="width: 591px; height: 95px; left: 28px; top: 564px; position: absolute; background: #D9D9D9; border-radius: 10px"></div>
-    <div style="width: 228px; height: 37px; left: 210px; top: 593px; position: absolute; color: black; font-size: 40px; font-family: Inter;">PORTFOLIO</div>
-  </a>
+    <!-- Main Asset -->
+    <img src="Assets/main_page_asset.PNG" style="width:1651.3px; height:1346.72px; left:400.97px; top:38.43px; transform: rotate(-3deg); transform-origin: top left;">
 
-  <a href="commissions.html" style="text-decoration: none; color: black;">
-    <div style="width: 591px; height: 96px; left: 28px; top: 678px; position: absolute; background: #D9D9D9; border-radius: 10px"></div>
-    <div style="width: 291px; height: 37px; left: 178px; top: 708px; position: absolute; color: black; font-size: 40px; font-family: Inter;">COMMISSIONS</div>
-  </a>
-
-
-  <img style="width: 984px; height: 437px; left: 4px; top: 2px; position: absolute" src= "Assets/logo.PNG" />
-  <img style="width: 74px; height: 74px; left: 28px; top: 786px; position: absolute" src="Assets/logos/twitch.png" />
-  <img style="width: 74px; height: 74px; left: 364px; top: 786px; position: absolute" src="Assets/logos/bsky.png" />
-  <img style="width: 74px; height: 74px; left: 196px; top: 786px; position: absolute" src="Assets/logos/youtube.png" />
-  <img style="width: 74px; height: 74px; left: 280px; top: 786px; position: absolute" src="Assets/logos/tumblr.png" />
-  <img style="width: 74px; height: 74px; left: 112px; top: 786px; position: absolute" src="Assets/logos/discord.png" />
-
-  <img style="width: 1651.30px; height: 1346.72px; left: 400.97px; top: 38.43px; position: absolute; transform: rotate(-3deg); transform-origin: top left" src="Assets/main_page_asset.PNG" />
-  <div style="width: 97px; height: 61px; left: 956.09px; top: 677.18px; position: absolute; transform: rotate(23deg); transform-origin: top left; background: rgba(217, 217, 217, 0)"></div>
+    <!-- Invisible overlay box -->
+    <div style="width:97px; height:61px; left:956.09px; top:677.18px; position:absolute; transform: rotate(23deg); transform-origin: top left; background: rgba(217, 217, 217, 0)"></div>
 </div>
 
 </body>
