@@ -7,52 +7,18 @@
         body {
             margin: 0;
             font-family: 'Inter', Arial, sans-serif;
-            background-color: #464D77;
-            color: white;
+            background: #464D77;
+            overflow-x: hidden;
         }
 
-        .container {
-            width: 1440px;
-            height: 2329px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .title {
+        .topbar {
             position: absolute;
-            font-size: 96px;
-            font-weight: 600;
+            width: 100%;
+            height: 90px;
+            background: #181D3B;
+            top: 0;
+            left: 0;
         }
-
-        .about-title { left: 468px; top: 108px; }
-        .persona-title { left: 289px; top: 1281px; font-weight: 400; }
-
-        .card {
-            position: absolute;
-            background-color: #D9D9D9;
-            border-radius: 10px;
-        }
-
-        .about-card { width: 648px; height: 385px; left: 748px; top: 263px; }
-
-        .about-text {
-            position: absolute;
-            width: 600px;
-            left: 772px;
-            top: 288px;
-            color: black;
-            font-size: 40px;
-            font-weight: 400;
-        }
-
-        .image {
-            position: absolute;
-        }
-
-        .img-left { left: 39px; top: 263px; width: 692px; height: 975px; }
-        .img-right { left: 751px; top: 667px; width: 643px; height: 559px; }
-        .img-bottom { left: 40px; top: 1422px; width: 1360px; height: 856px; }
 
         .home-btn {
             position: absolute;
@@ -63,48 +29,103 @@
             display: block;
         }
 
-        /* Top bar */
-        .topbar {
-          position: absolute;
-          width: 100%;
-          height: 90px;
-          background: #181D3B;
-          top: 0;
-          left: 0;
+        .portfolio, .commissions {
+            position: absolute;
+            top: 17px;
+            color: white;
+            font-size: 48px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
-        .home-btn { width:70px; height:72px; left:10px; top:9px; position:absolute; }
-        .portfolio { left:97px; top:17px; position:absolute; color:white; font-size:48px; font-weight:600; }
-        .commissions { left:390px; top:17px; position:absolute; color:white; font-size:48px; font-weight:600; }
+        .portfolio:hover, .commissions:hover {
+            color: #FFD700;
+        }
+
+        .portfolio { left: 97px; }
+        .commissions { left: 390px; }
+
+        .main-content {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .title {
+            font-weight: 600;
+            color: white;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 40px;
+            font-size: 96px;
+        }
+
+        .card {
+            background-color: #D9D9D9;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            flex: 1;
+        }
+
+        .about-text {
+            font-size: 28px;
+            line-height: 1.6;
+            color: #111;
+        }
+
+        .image {
+            flex: 1;
+            max-width: 1000px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 1000px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image {
+                margin-top: 40px;
+            }
+        }
+
     </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="topbar"></div>
+    <div class="topbar"></div>
+    <a class="home-btn" href="main%20page.html">
+        <div style="width:52.5px;height:60px;position:absolute;left:8.75px;top:6px;outline:3.5px white solid;outline-offset:-1.75px"></div>
+    </a>
+    <a href="portfolio.html" class="portfolio">PORTFOLIO</a>
+    <a href="commissions.html" class="commissions">COMMISSIONS</a>
 
-    <div class="title about-title">ABOUT ME</div>
-    <div class="title persona-title">Persona Reference</div>
+    <div class="title">ABOUT ME</div>
 
-    <div class="card about-card"></div>
-    <div class="about-text">
-        Howdy! <br/>
-        I'm Bexyarts, also known as Bexy or Bex. I'm a digital artist with a passion for game design and character illustration. I stream on Twitch where I play video games and create art.
+    <div class="main-content">
+        <div class="card about-card">
+            <div class="about-text">
+                Howdy! <br/>
+                I'm Bexyarts, also known as Bexy or Bex. I'm a digital artist with a passion for game design and character illustration. I stream on Twitch where I play video games and create art.
+            </div>
+        </div>
+
+        <img class="image img-bottom" src="Assets/persona_ref.png" alt="Persona Reference">
     </div>
-
-    <img class="image img-left" src="https://placehold.co/692x975" alt="Persona Reference">
-    <img class="image img-right" src="https://placehold.co/643x559" alt="About Image">
-    <img class="image img-bottom" src="https://placehold.co/1360x856" alt="Portfolio Image">
-
-    <!-- top bar -->
-    <a class="home-btn" href="main%20page.html"><div style="width:52.5px;height:60px;position:absolute;left:8.75px;top:6px;outline:3.5px white solid;outline-offset:-1.75px"></div></a>
-    <a href="portfolio.html" class="portfolio" style="text-decoration:none; color:white;">
-        PORTFOLIO
-      </a>
-    <a href="commissions.html" class="commissions" style="text-decoration:none; color:white;">
-        COMMISSIONS
-      </a>
-</div>
 
 </body>
 </html>
+
+
