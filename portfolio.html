@@ -6,14 +6,36 @@
 
   <style>
     body { margin:0; font-family: Inter, Arial, sans-serif; background:#464D77; }
-    .container { width:1461px; height:5767px; margin:0 auto; position:relative; background:transparent; overflow:hidden; }
-    .topbar { width:1461px; height:90px; left:0; top:0; position:absolute; background:#181D3B; }
+    .container {
+    width: 100vw;
+    margin: 0;
+    position: relative;
+    background: transparent;
+    overflow-y: auto;
+    min-height: 100vh;
+    }
+    .topbar {width: 100%; height: 90px; background:#181D3B}
+    .sidebar-bg {
+    position: absolute;
+    top: 206px;
+    left: 0;
+    width: 381px;
+    height: calc(100vh - 206px);
+    background: #2E3664;
+    }
     .title { left:20px; top:90px; position:absolute; color:white; font-size:96px; font-weight:600; }
-    .main-bg { width:1461px; height:5561px; left:0; top:206px; position:absolute; background:#2E3664; }
-    .sidebar-bg { width:381px; height:5561px; left:0; top:206px; position:absolute; background:#242A53; }
+    .main-bg {
+    position:absolute;
+    top:206px;
+    width: 100%;
+    background:#2E3664;
+    height:auto;
+    min-height:100%;
+    }
 
 
-    .sidebar { width:381px; height:745px; left:0; top:206px; position:absolute; display:flex; flex-direction:column; padding-top:40px; gap:24px; }
+    .sidebar { width:381px; height:300px; left:0; top:206px; position:absolute; display:flex; flex-direction:column; padding-top:40px; gap:24px;}
+
     .tab {
       color:white; font-size:40px; font-weight:600; padding-left:30px; cursor:pointer;
       user-select:none; line-height:1;
@@ -28,13 +50,72 @@
 
 
     .content {
-      position:absolute; left:420px; top:230px; width:980px; min-height:400px; color:white; font-size:18px;
-      padding:20px; box-sizing:border-box;
-      background: rgba(0,0,0,0.06); border-radius:8px;
+    position: absolute;
+    left: 420px;
+    top: 230px;
+    width: calc(97% - 420px);
+    min-height: 400px;
+    background: rgba(0,0,0,0.06);
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
     }
 
-    .hidden { display:none; }
+    .hidden {
+        display: none !important;
+    }
 
+    #content-artwork {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+  .artwork-yearbutton {
+    background-color: #D9D9D9;
+    color: black;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 150px;
+    text-align: center;
+  }
+
+  #year-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .artwork-yearbutton:hover {
+    background-color: #C0C0C0;
+    transform: translateY(-2px);
+  }
+
+  .artwork-yearbutton:active {
+    transform: translateY(0);
+  }
+
+  #artwork-display {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+  #artwork-display img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
     .home-btn { width:70px; height:72px; left:10px; top:9px; position:absolute; }
     .about { left:97px; top:17px; position:absolute; color:white; font-size:48px; font-weight:600; }
@@ -46,16 +127,14 @@
   <div class="container">
 
     <div class="topbar"></div>
-    <div class="title">PORTFOLIO</div>
-
-    <div class="main-bg"></div>
     <div class="sidebar-bg"></div>
 
-    <!-- Sidebar with tabs -->
-    <div class="sidebar" id="sidebar">
-      <div id="tab-artwork" class="tab">ARTWORK</div>
-      <div id="tab-gamedev" class="tab">GAME DEVELOPMENT</div>
-      <div id="tab-smp" class="tab">SMP PROJECTS</div>
+    <div class="title">PORTFOLIO</div>
+
+    <div class="sidebar">
+        <div id="tab-artwork" class="tab">ARTWORK</div>
+        <div id="tab-gamedev" class="tab">GAME DEVELOPMENT</div>
+        <div id="tab-smp" class="tab">SMP PROJECTS</div>
     </div>
 
     <!-- Top bar -->
@@ -69,10 +148,20 @@
 
     <!-- Content panels -->
     <div id="content-artwork" class="content">
-      <h1 style="margin-top:0;">Artwork</h1>
-      <p>Put your artwork gallery, descriptions, and images here.</p>
-      <p>Example: thumbnails, medium-sized preview, short descriptions.</p>
+
+    <div id="year-buttons">
+        <button class="artwork-yearbutton" data-year="2025">2025</button>
+        <button class="artwork-yearbutton" data-year="2024">2024</button>
+        <button class="artwork-yearbutton" data-year="2023">2023</button>
+        <button class="artwork-yearbutton" data-year="2022">2022</button>
+        <button class="artwork-yearbutton" data-year="2021">2021</button>
+        <button class="artwork-yearbutton" data-year="2020">2020</button>
     </div>
+
+    <div id="artwork-display"></div>
+
+    </div>
+
 
     <div id="content-gamedev" class="content hidden">
       <h1 style="margin-top:0;">Game Development</h1>
@@ -123,6 +212,37 @@
       // Show the default tab
       show('tab-artwork', 'content-artwork');
     });
+
+      const artworks = {
+    "2025": ["Assets/Artwork/2025_1.png", "Assets/Artwork/2025_2.png", "Assets/Artwork/2025_3.png", "Assets/Artwork/2025_4.png", "Assets/Artwork/2025_5.png", "Assets/Artwork/2025_6.png", "Assets/Artwork/2025_7.png", "Assets/Artwork/2025_8.png", "Assets/Artwork/2025_9.png", "Assets/Artwork/2025_10.png", "Assets/Artwork/2025_11.png", "Assets/Artwork/2025_12.png", "Assets/Artwork/2025_13.png", "Assets/Artwork/2025_14.png"],
+    "2024": ["Assets/Artwork/2024_1.png", "Assets/Artwork/2024_2.png", "Assets/Artwork/2024_3.png", "Assets/Artwork/2024_4.png", "Assets/Artwork/2024_5.png", "Assets/Artwork/2024_6.png", "Assets/Artwork/2024_7.png", "Assets/Artwork/2024_8.png", "Assets/Artwork/2024_9.png", "Assets/Artwork/2024_10.png", "Assets/Artwork/2024_11.png", "Assets/Artwork/2024_12.png", "Assets/Artwork/2024_13.png", "Assets/Artwork/2024_14.png", "Assets/Artwork/2024_15.png"],
+    "2023": ["Assets/Artwork/2023_1.png", "Assets/Artwork/2023_2.png", "Assets/Artwork/2023_3.png", "Assets/Artwork/2023_4.png", "Assets/Artwork/2023_5.png", "Assets/Artwork/2023_6.png", "Assets/Artwork/2023_7.png", "Assets/Artwork/2023_8.png", "Assets/Artwork/2023_9.png", "Assets/Artwork/2023_10.png"],
+    "2022": ["Assets/Artwork/2022_1.png", "Assets/Artwork/2022_2.png", "Assets/Artwork/2022_3.png", "Assets/Artwork/2022_4.png", "Assets/Artwork/2022_5.png"],
+    "2021": ["Assets/Artwork/2021_1.png", "Assets/Artwork/2021_2.png", "Assets/Artwork/2021_3.png", "Assets/Artwork/2021_4.png", "Assets/Artwork/2021_5.png", "Assets/Artwork/2021_6.png"],
+    "2020": ["Assets/Artwork/2020_1.png", "Assets/Artwork/2020_2.png", "Assets/Artwork/2020_3.png", "Assets/Artwork/2020_4.png"]
+  };
+
+  const buttons = document.querySelectorAll(".artwork-yearbutton");
+  const display = document.getElementById("artwork-display");
+
+  buttons.forEach(button => {
+      button.addEventListener("click", () => {
+          const year = button.getAttribute("data-year");
+          display.innerHTML = "";
+
+          if (artworks[year]) {
+            artworks[year].forEach(src => {
+                const img = document.createElement("img");
+                img.src = src;
+                img.style.width = "100%";
+                img.style.height = "auto";
+                img.style.marginTop = "20px";
+                display.appendChild(img);
+            });
+        }
+      });
+  });
+
   </script>
 </body>
 </html>
