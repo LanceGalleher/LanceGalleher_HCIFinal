@@ -109,14 +109,6 @@
       border-radius: 4px;
     }
 
-    /* Home link */
-    .home-link {
-      position: absolute;
-      left: 10px;
-      top: 9px;
-      width: 70px;
-      height: 72px;
-    }
     .home-link div {
       width: 52.5px;
       height: 60px;
@@ -127,15 +119,9 @@
       top: 6px;
     }
 
-    /* Header links */
-    .header-link {
-      position: absolute;
-      font-size: 48px;
-      font-weight: 600;
-      color: white;
-    }
-    .portfolio-link { left: 97px; top: 17px; }
-    .about-link { left: 401px; top: 17px; }
+    .home-btn { width:70px; height:72px; left:10px; top:9px; position:absolute; }
+    .about { left:97px; top:17px; position:absolute; color:white; font-size:48px; font-weight:600; }
+    .portfolio { left:384px; top:17px; position:absolute; color:white; font-size:48px; font-weight:600; }
   </style>
 </head>
 <body>
@@ -145,9 +131,13 @@
   <div class="page-title">COMMISSIONS</div>
 
   <!-- top bar -->
-  <a class="home-link" href="main%20page.html"><div></div></a>
-  <div class="header-link portfolio-link">PORTFOLIO</div>
-  <div class="header-link about-link">ABOUT ME</div>
+  <a class="home-btn" href="main%20page.html"><div style="width:52.5px;height:60px;position:absolute;left:8.75px;top:6px;outline:3.5px white solid;outline-offset:-1.75px"></div></a>
+  <a href="portfolio.html" class="portfolio" style="text-decoration:none; color:white;">
+      PORTFOLIO
+    </a>
+  <a href="aboutme.html" class="about" style="text-decoration:none; color:white;">
+      ABOUT ME
+    </a>
 
   <!-- BUTTONS -->
   <!-- Request Form -->
@@ -164,7 +154,7 @@
   <div class="card" style="left:780px; top:240px; width:585px; height:242px;">
     <div class="card-title">CLOSED</div>
     <div class="subtitle">Slots available: 0/4</div>
-    <div class="last-updated" style="left:894px; top:451px;">Last updated on 11/25/2025</div>
+    <div class="last-updated" style="left:50px; top:200px;">Last updated on 11/25/2025</div>
   </div>
 
   <!-- OPTIONS -->
@@ -236,7 +226,7 @@
   <!-- Character drawing half -->
   <div class="card" style="left:36px; top:2538px; width:1368px; height:377px;">
     <div class="section-title" style="left:679px; top:20px; position:absolute;">Character Drawing: Halfbody</div>
-    <div class="subtitle" style="left:699px; top:120px; position:absolute;">
+    <div class="subtitle" style="left:699px; top:130px; position:absolute;">
       Sketch: $20<br/>
       Lineart: $25<br/>
       Flat color: $30<br/>
@@ -249,7 +239,7 @@
   <!-- character drawing full -->
   <div class="card" style="left:36px; top:2938px; width:1368px; height:377px;">
     <div class="section-title" style="left:679px; top:20px; position:absolute;">Character Drawing: Fullbody</div>
-    <div class="subtitle" style="left:699px; top:120px; position:absolute;">
+    <div class="subtitle" style="left:699px; top:130px; position:absolute;">
       Sketch: $20<br/>
       Lineart: $25<br/>
       Flat color: $30<br/>
