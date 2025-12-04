@@ -157,110 +157,406 @@
     <div class="last-updated" style="left:50px; top:200px;">Last updated on 11/25/2025</div>
   </div>
 
+
   <!-- OPTIONS -->
   <!-- Profile Picture -->
-  <div class="card" style="left:36px; top:538px; width:1368px; height:377px;">
-    <div class="section-title" style="left:679px; top:20px; position:absolute;">Profile Picture</div>
-    <div class="subtitle" style="left:699px; top:80px; position:absolute;">
-      Sketch: $20<br/>
-      Lineart: $25<br/>
-      Flat color: $30<br/>
-      Flat Color + Shading: $35<br/>
-      Full Render: $40
+  <div class="card" style="left:36px; top:538px; width:1368px; height:377px; display:flex; gap:20px; padding:20px; box-sizing:border-box;">
+
+    <div class="example-slideshow" style="flex:0 0 300px; height:auto; overflow:hidden; border-radius:10px; position:relative;">
+    <div class="slide-container" style="position:relative;">
+      <img src="Assets/Commissions/profile_sketch.PNG" class="slide" style="width:100%; height:auto; object-fit:cover;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Sketch
+      </div>
     </div>
-    <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+    <div class="slide-container" style="position:relative; display:none;">
+      <img src="Assets/Commissions/profile_lineart.PNG" class="slide" style="width:100%; height:auto; object-fit:cover;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Lineart
+      </div>
+    </div>
+    <div class="slide-container" style="position:relative; display:none;">
+      <img src="Assets/Commissions/profile_flatcolor.PNG" class="slide" style="width:100%; height:auto; object-fit:cover;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Flat Color
+      </div>
+    </div>
+    <div class="slide-container" style="position:relative; display:none;">
+      <img src="Assets/Commissions/profile_flatcolorshading.PNG" class="slide" style="width:100%; height:auto; object-fit:cover;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Flat Color + Shading
+      </div>
+    </div>
+    <div class="slide-container" style="position:relative; display:none;">
+      <img src="Assets/Commissions/profile_fullrender.PNG" class="slide" style="width:100%; height:auto; object-fit:cover;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Full Render
+      </div>
+    </div>
+
+
+    <button class="prev-slide" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:5px 10px; cursor:pointer;">&#10094;</button>
+    <button class="next-slide" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:5px 10px; cursor:pointer;">&#10095;</button>
+
   </div>
 
-  <!-- emotes -->
-  <div class="card" style="left:36px; top:938px; width:1368px; height:377px;">
-    <div class="section-title" style="left:679px; top:20px; position:absolute;">Emotes</div>
-    <div class="subtitle" style="left:699px; top:80px; position:absolute;">
-      Sketch: $20<br/>
-      Lineart: $25<br/>
-      Flat color: $30<br/>
-      Flat Color + Shading: $35<br/>
-      Full Render: $40
+
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:10px; color:black;">
+      <div>
+        <div class="section-title" style="font-size:48px; margin-bottom:10px;">Profile Picture</div>
+        <div class="subtitle" style="font-size:32px; line-height:1.4;">
+          Sketch: $20<br/>
+          Lineart: $25<br/>
+          Flat color: $30<br/>
+          Flat Color + Shading: $35<br/>
+          Full Render: $40
+        </div>
+      </div>
+
+      <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
     </div>
-    <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+
+  </div>
+
+
+  <!-- emotes -->
+  <div class="card" style="left:36px; top:938px; width:1368px; height:377px; display:flex; gap:20px; padding:20px; box-sizing:border-box;">
+
+    <div class="example-slideshow" style="flex:0 0 300px; height:100%; overflow:hidden; border-radius:10px; position:relative;">
+
+    <div class="slide-container" style="position:absolute; top:0; left:0; width:100%; height:100%; display:block;">
+      <img src="Assets/Commissions/emote_flat.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Flat color
+      </div>
+    </div>
+    <div class="slide-container" style="position:relative; display:none;">
+      <img src="Assets/Commissions/emote_flatshading.PNG" class="slide" style="width:100%; height:auto; object-fit:cover;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Flat Color + Shading
+      </div>
+    </div>
+    <div class="slide-container" style="position:relative; display:none;">
+      <img src="Assets/Commissions/emote_animated.GIF" class="slide" style="width:100%; height:auto; object-fit:cover;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Animated
+      </div>
+    </div>
+
+
+    <button class="prev-slide" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:5px 10px; cursor:pointer;">&#10094;</button>
+    <button class="next-slide" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:5px 10px; cursor:pointer;">&#10095;</button>
+
+  </div>
+
+
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:10px; color:black;">
+      <div>
+        <div class="section-title" style="font-size:48px; margin-bottom:10px;">Emotes</div>
+        <div class="subtitle" style="font-size:32px; line-height:1.4;">
+          Flat color: $30<br/>
+          Flat Color + Shading: $35<br/>
+          Animated: $40
+        </div>
+      </div>
+
+      <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+    </div>
+
   </div>
 
   <!-- character portraits -->
-  <div class="card" style="left:36px; top:1338px; width:1368px; height:377px;">
-    <div class="section-title" style="left:679px; top:20px; position:absolute;">Character Portraits</div>
-    <div class="subtitle" style="left:699px; top:80px; position:absolute;">
-      Sketch: $20<br/>
-      Lineart: $25<br/>
-      Flat color: $30<br/>
-      Flat Color + Shading: $35<br/>
-      Full Render: $40
+  <div class="card" style="left:36px; top:1338px; width:1368px; height:377px; display:flex; gap:20px; padding:20px; box-sizing:border-box;">
+
+    <div class="example-slideshow" style="flex:0 0 300px; height:100%; overflow:hidden; border-radius:10px; position:relative;">
+
+    <div class="slide-container" style="position:absolute; top:0; left:0; width:100%; height:100%; display:block;">
+      <img src="Assets/Commissions/portrait_sketch.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Sketch
+      </div>
     </div>
-    <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+
+
+    <button class="prev-slide" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:5px 10px; cursor:pointer;">&#10094;</button>
+    <button class="next-slide" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:5px 10px; cursor:pointer;">&#10095;</button>
+
+  </div>
+
+
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:10px; color:black;">
+      <div>
+        <div class="section-title" style="font-size:48px; margin-bottom:10px;">Character Portrait</div>
+        <div class="subtitle" style="font-size:32px; line-height:1.4;">
+          Sketch: $20<br/>
+          Lineart: $25<br/>
+          Flat color: $30<br/>
+          Flat Color + Shading: $35<br/>
+          Full Render: $40
+        </div>
+      </div>
+
+      <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+    </div>
+
   </div>
 
   <!-- video thumbnails -->
-  <div class="card" style="left:36px; top:1738px; width:1368px; height:377px;">
-    <div class="section-title" style="left:679px; top:20px; position:absolute;">Video Thumbnails</div>
-    <div class="subtitle" style="left:699px; top:80px; position:absolute;">
-      Sketch: $20<br/>
-      Lineart: $25<br/>
-      Flat color: $30<br/>
-      Flat Color + Shading: $35<br/>
-      Full Render: $40
+  <div class="card" style="left:36px; top:1738px; width:1368px; height:377px; display:flex; gap:20px; padding:20px; box-sizing:border-box;">
+    <div class="example-slideshow" style="flex:1; height:100%; overflow:hidden; border-radius:10px; position:relative;">
+    <div class="slide-container" style="position:relative;">
+      <img src="Assets/Commissions/thumbnail_1.PNG" class="slide" style="width:100%; height:auto; object-fit:cover;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Example 1
+      </div>
     </div>
-    <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+    <div class="slide-container" style="position:relative; display:none;">
+      <img src="Assets/Commissions/thumbnail_2.PNG" class="slide" style="width:100%; height:auto; object-fit:cover;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Example 2
+      </div>
+    </div>
+    <div class="slide-container" style="position:relative; display:none;">
+      <img src="Assets/Commissions/thumbnail_3.PNG" class="slide" style="width:100%; height:auto; object-fit:cover;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Example 3
+      </div>
+    </div>
+    <div class="slide-container" style="position:relative; display:none;">
+      <img src="Assets/Commissions/thumbnail_4.PNG" class="slide" style="width:100%; height:auto; object-fit:cover;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Example 4
+      </div>
+    </div>
+
+
+    <button class="prev-slide" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:5px 10px; cursor:pointer;">&#10094;</button>
+    <button class="next-slide" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:5px 10px; cursor:pointer;">&#10095;</button>
+
+  </div>
+
+
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:10px; color:black;">
+      <div>
+        <div class="section-title" style="font-size:48px; margin-bottom:10px;">Video Thumbnail</div>
+        <div class="subtitle" style="font-size:32px; line-height:1.4;">
+          Sketch: $20<br/>
+          Lineart: $25<br/>
+          Flat color: $30<br/>
+          Flat Color + Shading: $35<br/>
+          Full Render: $40
+        </div>
+      </div>
+
+      <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+    </div>
+
   </div>
 
   <!-- PNGtuber -->
-  <div class="card" style="left:36px; top:2138px; width:1368px; height:377px;">
-    <div class="section-title" style="left:679px; top:20px; position:absolute;">PNGtuber</div>
-    <div class="subtitle" style="left:699px; top:80px; position:absolute;">
-      Sketch: $20<br/>
-      Lineart: $25<br/>
-      Flat color: $30<br/>
-      Flat Color + Shading: $35<br/>
-      Full Render: $40
+  <div class="card" style="left:36px; top:2138px; width:1368px; height:377px; display:flex; gap:20px; padding:20px; box-sizing:border-box;">
+
+    <div class="example-slideshow" style="flex:0 0 300px; height:100%; overflow:hidden; border-radius:10px; position:relative;">
+
+    <div class="slide-container" style="position:absolute; top:0; left:0; width:100%; height:100%; display:block;">
+      <img src="Assets/Commissions/pngtuber_lineart.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Sketch
+      </div>
     </div>
-    <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+
+
+    <button class="prev-slide" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:5px 10px; cursor:pointer;">&#10094;</button>
+    <button class="next-slide" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:5px 10px; cursor:pointer;">&#10095;</button>
+
+  </div>
+
+
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:10px; color:black;">
+      <div>
+        <div class="section-title" style="font-size:48px; margin-bottom:10px;">PNGtuber</div>
+        <div class="subtitle" style="font-size:32px; line-height:1.4;">
+          Sketch: $20<br/>
+          Lineart: $25<br/>
+          Flat color: $30<br/>
+          Flat Color + Shading: $35<br/>
+          Full Render: $40
+        </div>
+      </div>
+
+      <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+    </div>
+
   </div>
 
   <!-- Character drawing half -->
-  <div class="card" style="left:36px; top:2538px; width:1368px; height:377px;">
-    <div class="section-title" style="left:679px; top:20px; position:absolute;">Character Drawing: Halfbody</div>
-    <div class="subtitle" style="left:699px; top:130px; position:absolute;">
-      Sketch: $20<br/>
-      Lineart: $25<br/>
-      Flat color: $30<br/>
-      Flat Color + Shading: $35<br/>
-      Full Render: $40
+  <div class="card" style="left:36px; top:2538px; width:1368px; height:377px; display:flex; gap:20px; padding:20px; box-sizing:border-box;">
+
+    <div class="example-slideshow" style="flex:0 0 300px; height:100%; overflow:hidden; border-radius:10px; position:relative;">
+
+    <div class="slide-container" style="position:absolute; top:0; left:0; width:100%; height:100%; display:block;">
+      <img src="Assets/Commissions/halfbody_sketch.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+      <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+        Sketch
+      </div>
     </div>
-    <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+
+
+    <button class="prev-slide" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:5px 10px; cursor:pointer;">&#10094;</button>
+    <button class="next-slide" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:5px 10px; cursor:pointer;">&#10095;</button>
+
+  </div>
+
+
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:10px; color:black;">
+      <div>
+        <div class="section-title" style="font-size:48px; margin-bottom:10px;">Character Drawing: Halfbody</div>
+        <div class="subtitle" style="font-size:32px; line-height:1.4;">
+          Sketch: $20<br/>
+          Lineart: $25<br/>
+          Flat color: $30<br/>
+          Flat Color + Shading: $35<br/>
+          Full Render: $40
+        </div>
+      </div>
+
+      <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+    </div>
+
   </div>
 
   <!-- character drawing full -->
-  <div class="card" style="left:36px; top:2938px; width:1368px; height:377px;">
-    <div class="section-title" style="left:679px; top:20px; position:absolute;">Character Drawing: Fullbody</div>
-    <div class="subtitle" style="left:699px; top:130px; position:absolute;">
-      Sketch: $20<br/>
-      Lineart: $25<br/>
-      Flat color: $30<br/>
-      Flat Color + Shading: $35<br/>
-      Full Render: $40
+  <div class="card" style="left:36px; top:2938px; width:1368px; height:377px; display:flex; gap:20px; padding:20px; box-sizing:border-box;">
+    <div class="example-slideshow" style="flex:0 0 300px; height:100%; overflow:hidden; border-radius:10px; position:relative;">
+      <div class="slide-container" style="position:absolute; top:0; left:0; width:100%; height:100%; display:block;">
+        <img src="Assets/Commissions/fullbody_sketch.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+        <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+          Sketch
+        </div>
+      </div>
+      <div class="slide-container" style="position:absolute; top:0; left:0; width:100%; height:100%; display:none;">
+        <img src="Assets/Commissions/fullbody_lineart.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+        <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+          Lineart
+        </div>
+      </div>
+      <div class="slide-container" style="position:absolute; top:0; left:0; width:100%; height:100%; display:none;">
+        <img src="Assets/Commissions/fullbody_flatcolor.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+        <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+          Flat Color
+        </div>
+      </div>
+      <div class="slide-container" style="position:absolute; top:0; left:0; width:100%; height:100%; display:none;">
+        <img src="Assets/Commissions/fullbody_flatcolorshading.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+        <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+          Flat Color + Shading
+        </div>
+      </div>
+      <div class="slide-container" style="position:absolute; top:0; left:0; width:100%; height:100%; display:none;">
+        <img src="Assets/Commissions/fullbody_fullrender.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+        <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+          Full Render
+        </div>
+      </div>
+      <button class="prev-slide" style="position:absolute; top:50%; left:5px; transform:translateY(-50%); z-index:10; background:rgba(0,0,0,0.5); color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10094;</button>
+      <button class="next-slide" style="position:absolute; top:50%; right:5px; transform:translateY(-50%); z-index:10; background:rgba(0,0,0,0.5); color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10095;</button>
+
     </div>
-    <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:10px; color:black;">
+      <div>
+        <div class="section-title" style="font-size:48px; margin-bottom:10px;">Character Drawing Full</div>
+        <div class="subtitle" style="font-size:32px; line-height:1.4;">
+          Sketch: $20<br/>
+          Lineart: $25<br/>
+          Flat color: $30<br/>
+          Flat Color + Shading: $35<br/>
+          Full Render: $40
+        </div>
+      </div>
+
+      <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+    </div>
   </div>
 
+
+
+
   <!-- custom -->
-  <div class="card" style="left:36px; top:3338px; width:1368px; height:377px;">
-    <div class="section-title" style="left:679px; top:20px; position:absolute;">Custom Slot</div>
-    <div class="subtitle" style="left:699px; top:80px; position:absolute;">
-      Sketch: $20<br/>
-      Lineart: $25<br/>
-      Flat color: $30<br/>
-      Flat Color + Shading: $35<br/>
-      Full Render: $40
+  <div class="card" style="left:36px; top:3338px; width:1368px; height:400px; display:flex; gap:20px; padding:20px; box-sizing:border-box;">
+
+    <div class="example-slideshow" style="flex:1; height:100%; overflow:hidden; border-radius:10px; position:relative;">
+
+      <div class="slide-container" style="position:relative; display:block; height:100%;">
+        <img src="Assets/Commissions/custom_1.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+        <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+          Sketch
+        </div>
+      </div>
+      <div class="slide-container" style="position:relative; display:none; height:100%;">
+        <img src="Assets/Commissions/custom_2.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+        <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+          Lineart
+        </div>
+      </div>
+      <div class="slide-container" style="position:relative; display:none; height:100%;">
+        <img src="Assets/Commissions/custom_3.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+        <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+          Flat Color
+        </div>
+      </div>
+      <div class="slide-container" style="position:relative; display:none; height:100%;">
+        <img src="Assets/Commissions/custom_4.PNG" class="slide" style="width:100%; height:100%; object-fit:contain;">
+        <div class="slide-label" style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:24px; font-weight:500; padding:5px 10px; border-radius:5px;">
+          Flat Color + Shading
+        </div>
+      </div>
+
+      <button class="prev-slide" style="position:absolute; top:50%; left:5px; transform:translateY(-50%); z-index:10; background:rgba(0,0,0,0.5); color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10094;</button>
+      <button class="next-slide" style="position:absolute; top:50%; right:5px; transform:translateY(-50%); z-index:10; background:rgba(0,0,0,0.5); color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10095;</button>
+
     </div>
-    <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+
+
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:10px; color:black;">
+      <div>
+        <div class="section-title" style="font-size:48px; margin-bottom:10px;">Custom Commission</div>
+        <div class="subtitle" style="font-size:32px; line-height:1.4;">
+          Sketch: $20<br/>
+          Lineart: $25<br/>
+          Flat color: $30<br/>
+          Flat Color + Shading: $35<br/>
+          Full Render: $40
+        </div>
+      </div>
+
+      <div class="price" style="left:1151px; top:300px;">$20 -$40</div>
+    </div>
   </div>
+
+
+
+  <script>
+    document.querySelectorAll('.example-slideshow').forEach(slideshow => {
+    const slides = slideshow.querySelectorAll('.slide-container');
+    let current = 0;
+
+    const showSlide = (index) => {
+      slides.forEach((slide, i) => slide.style.display = (i === index) ? 'block' : 'none');
+    };
+
+    slideshow.querySelector('.prev-slide').addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    });
+
+    slideshow.querySelector('.next-slide').addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    });
+  });
+  </script>
+
 
 
 </div>
