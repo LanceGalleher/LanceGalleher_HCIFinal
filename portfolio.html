@@ -144,6 +144,53 @@
   }
 
 
+  .screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .screenshot-grid img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+
+  .game-description-section {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 70px;
+  }
+
+  .game-img {
+    width: 350px;
+    height: auto;
+  }
+
+  .description-box {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  }
+
+  .description-box h3 {
+    margin-top: 0;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .description-box p {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #111;
+  }
+
+
   /* SMP TAB */
     .smp-buttons {
     display: flex;
@@ -260,27 +307,74 @@
 
       <div class="dropdown">
         <button class="dropdown-btn">Aeternum: The Trials</button>
+
         <div class="dropdown-content">
-          <p>Description:</p>
-          <p>Status:.</p>
+
+          <div class="screenshot-grid">
+            <img src="Assets/Game Dev/The Trials/Trials_1.png">
+            <img src="Assets/Game Dev/The Trials/Trials_2.png">
+            <img src="Assets/Game Dev/The Trials/Trials_3.png">
+          </div>
+
+          <div class="game-description-section">
+            <img class="game-img" src="Assets/Game Dev/The Trials/Trials_waystone.png">
+
+            <div class="description-box">
+              <h3>Description</h3>
+              <p>
+                Description woah
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
 
       <div class="dropdown">
         <button class="dropdown-btn">Aeternum: Map Testing</button>
         <div class="dropdown-content">
-          <p>Description:</p>
-          <p>Status:</p>
+
+          <div class="screenshot-grid">
+            <img src="Assets/Game Dev/Map%20Test/map_1.png">
+            <img src="Assets/Game Dev/The%20Trials/Trials_map.PNG">
+            <img src="Assets/Game Dev/Map%20Test/waystoneconcept_1.PNG">
+          </div>
+
+          <div class="game-description-section">
+            <img class="game-img" style="width: 500px" src="Assets/Game Dev/Map%20Test/map_2.png">
+
+            <div class="description-box">
+              <h3>Description</h3>
+              <p>
+                Description woah
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="dropdown">
         <button class="dropdown-btn">It Lurks Within</button>
         <div class="dropdown-content">
-          <p>Description:</p>
-          <p>Status:</p>
-        </div>
+          <div class="screenshot-grid">
+            <img src="Assets/Game Dev/It%20Lurks%20Within/Titlescreen_final.png">
+            <img src="Assets/Game Dev/It%20Lurks%20Within/Roe_ref.PNG">
+            <img src="Assets/Game Dev/It%20Lurks%20Within/bg_1.PNG">
+          </div>
+
+          <div class="game-description-section">
+            <img class="game-img" style="width: 700px" src="Assets/Game Dev/It%20Lurks%20Within/bg_3.PNG">
+
+            <div class="description-box">
+              <h3>Description</h3>
+              <p>
+                Description woah
+              </p>
+            </div>
+          </div>
       </div>
+    </div>
+
     </div>
 
 
