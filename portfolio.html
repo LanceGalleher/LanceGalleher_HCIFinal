@@ -24,14 +24,7 @@
     background: #2E3664;
     }
     .title { left:20px; top:90px; position:absolute; color:white; font-size:96px; font-weight:600; }
-    .main-bg {
-    position:absolute;
-    top:206px;
-    width: 100%;
-    background:#2E3664;
-    height:auto;
-    min-height:100%;
-    }
+
 
 
     .sidebar { width:381px; height:300px; left:0; top:206px; position:absolute; display:flex; flex-direction:column; padding-top:40px; gap:24px;}
@@ -66,6 +59,7 @@
         display: none !important;
     }
 
+    /* ARTWORK TAB */
     #content-artwork {
     display: flex;
     flex-direction: column;
@@ -117,6 +111,95 @@
     border-radius: 8px;
 }
 
+    /* GAME DEV TAB */
+  .dropdown {
+    margin-bottom: 15px;
+  }
+
+  .dropdown-btn {
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 50px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .dropdown-btn:hover {
+    background-color: #C0C0C0;
+  }
+
+  .dropdown-content {
+    display: none;
+    padding: 10px 20px;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 8px;
+    margin-top: 5px;
+    color: white;
+  }
+
+
+  /* SMP TAB */
+    .smp-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .smp-button {
+    background-color: #D9D9D9;
+    color: black;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 150px;
+    text-align: center;
+  }
+
+  .smp-button:hover {
+    background-color: #C0C0C0;
+    transform: translateY(-2px);
+  }
+
+  .smp-button:active {
+    transform: translateY(0);
+  }
+
+  .smp-title {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+
+  .smp-info-box {
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .smp-info {
+    text-align: left;
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
     .home-btn { width:70px; height:72px; left:10px; top:9px; position:absolute; }
     .about { left:97px; top:17px; position:absolute; color:white; font-size:48px; font-weight:600; }
     .commissions { left:384px; top:17px; position:absolute; color:white; font-size:48px; font-weight:600; }
@@ -146,7 +229,7 @@
       COMMISSIONS
     </a>
 
-    <!-- Content panels -->
+    <!-- ARTWORK TAB -->
     <div id="content-artwork" class="content">
 
     <div id="year-buttons">
@@ -162,16 +245,60 @@
 
     </div>
 
-
+    <!-- GAMEDEV TAB -->
     <div id="content-gamedev" class="content hidden">
-      <h1 style="margin-top:0;">Game Development</h1>
-      <p>Game dev projects, prototypes, links to builds, dev logs, etc.</p>
+
+      <div class="dropdown">
+        <button class="dropdown-btn">Aeternum: The Trials</button>
+        <div class="dropdown-content">
+          <p>Description:</p>
+          <p>Status:.</p>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-btn">Aeternum: Map Testing</button>
+        <div class="dropdown-content">
+          <p>Description:</p>
+          <p>Status:</p>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-btn">It Lurks Within</button>
+        <div class="dropdown-content">
+          <p>Description:</p>
+          <p>Status:</p>
+        </div>
+      </div>
     </div>
 
+
+    <!-- SMP TAB -->
     <div id="content-smp" class="content hidden">
-      <h1 style="margin-top:0;">SMP Projects</h1>
-      <p>SMP maps, screenshots, server info, and build showcases go here.</p>
+
+      <div class="smp-info-box">
+        <h1 class="smp-info">What is an SMP?</h1>
+        <p>SMP stands for “Survival Multiplayer”. This term is used when referring to multiplayer servers online. In this context - I am referring to multiplayer servers hosted through the game Minecraft.</p>
+        </div>
+
+      <h1 class="smp-title">ACTIVE SMPS</h1>
+      <div class="smp-buttons">
+        <button class="smp-button" data-smp-type="active" data-smp-name="SMP 1">SMP 1</button>
+        <button class="smp-button" data-smp-type="active" data-smp-name="SMP 2">SMP 2</button>
+      </div>
+
+      <h1 class="smp-title">PREVIOUS SMPS</h1>
+      <div class="smp-buttons">
+        <button class="smp-button" data-smp-type="previous" data-smp-name="SMP 1">SMP 1</button>
+        <button class="smp-button" data-smp-type="previous" data-smp-name="SMP 2">SMP 2</button>
+        <button class="smp-button" data-smp-type="previous" data-smp-name="SMP 3">SMP 3</button>
+      </div>
+
+      <div id="smp-display" class="smp-display"></div>
+
     </div>
+
 
   </div>
 
@@ -209,7 +336,6 @@
         });
       });
 
-      // Show the default tab
       show('tab-artwork', 'content-artwork');
     });
 
@@ -221,6 +347,77 @@
     "2021": ["Assets/Artwork/2021_1.png", "Assets/Artwork/2021_2.png", "Assets/Artwork/2021_3.png", "Assets/Artwork/2021_4.png", "Assets/Artwork/2021_5.png", "Assets/Artwork/2021_6.png"],
     "2020": ["Assets/Artwork/2020_1.png", "Assets/Artwork/2020_2.png", "Assets/Artwork/2020_3.png", "Assets/Artwork/2020_4.png"]
   };
+
+  document.querySelectorAll('.dropdown-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const content = button.nextElementSibling;
+    content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+  });
+});
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+
+  const smpButtons = document.querySelectorAll(".smp-button");
+
+  smpButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const type = button.dataset.smpType;
+      const name = button.dataset.smpName;
+
+      console.log(`${type.charAt(0).toUpperCase() + type.slice(1)} SMP clicked: ${name}`);
+    });
+  });
+
+});
+
+
+  const smpData = {
+    active: {
+      "SMP 1": {
+        description: "Description",
+      },
+      "SMP 2": {
+        description: "Description",
+      }
+    },
+    previous: {
+      "SMP 1": {
+        description: "Description",
+      },
+      "SMP 2": {
+        description: "Description",
+      },
+      "SMP 3": {
+        description: "Description",
+      }
+    }
+  };
+
+
+const smpButtons = document.querySelectorAll(".smp-button");
+const smpDisplay = document.getElementById("smp-display");
+
+smpButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const type = button.dataset.smpType;
+    const name = button.dataset.smpName;
+    const info = smpData[type][name];
+
+    if (info) {
+      smpDisplay.innerHTML = `
+        <div style="background: rgba(0,0,0,0.05); padding: 20px; border-radius: 8px; margin-top: 10px;">
+          <h2>${name}</h2>
+          <p><strong>Description:</strong> ${info.description}</p>
+        </div>
+      `;
+    }
+  });
+});
+
+
+
+
 
   const buttons = document.querySelectorAll(".artwork-yearbutton");
   const display = document.getElementById("artwork-display");
